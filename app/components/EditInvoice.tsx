@@ -108,7 +108,7 @@ export function EditInvoice({ data }: iAppProps) {
             <div>
               <Label>Currency</Label>
               <Select
-                defaultValue="USD"
+                defaultValue="INR"
                 name={fields.currency.name}
                 key={fields.currency.key}
                 onValueChange={(value) => setCurrency(value)}
@@ -117,10 +117,10 @@ export function EditInvoice({ data }: iAppProps) {
                   <SelectValue placeholder="Select Currency" />
                 </SelectTrigger>
                 <SelectContent>
+                  <SelectItem value="INR">INR -- INR</SelectItem>
                   <SelectItem value="USD">
                     United States Dollar -- USD
                   </SelectItem>
-                  <SelectItem value="EUR">Euro -- EUR</SelectItem>
                 </SelectContent>
               </Select>
               <p className="text-red-500 text-sm">{fields.currency.errors}</p>
