@@ -43,14 +43,14 @@ export async function RecentInvoices() {
                 {item.clientName}
               </p>
               <p className="text-sm text-muted-foreground">
-                {item.clientEmail}
+                {item.clientEmail.slice(0,5)}***@gmail.com
               </p>
             </div>
             <div className="ml-auto font-medium">
               +
               {formatCurrency({
                 amount: item.total,
-                currency: item.currency as any,
+                currency: "INR" as any,
               })}
             </div>
           </div>

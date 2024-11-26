@@ -304,7 +304,7 @@ export function CreateInvoice({
                 <Input
                   value={formatCurrency({
                     amount: calcualteTotal,
-                    currency: currency as any,
+                    currency: "INR" as any,
                   })}
                   disabled
                 />
@@ -319,7 +319,7 @@ export function CreateInvoice({
                 <span>
                   {formatCurrency({
                     amount: calcualteTotal,
-                    currency: currency as any,
+                    currency: "INR" as any,
                   })}
                 </span>
               </div>
@@ -328,7 +328,7 @@ export function CreateInvoice({
                 <span className="font-medium underline underline-offset-2">
                   {formatCurrency({
                     amount: calcualteTotal,
-                    currency: currency as any,
+                    currency: "INR" as any,
                   })}
                 </span>
               </div>

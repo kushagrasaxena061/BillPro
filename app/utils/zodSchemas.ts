@@ -8,7 +8,7 @@ export const onboardingSchema = z.object({
 
 export const invoiceSchema = z.object({
   invoiceName: z.string().min(1, "Invoice Name is required"),
-  total: z.number().min(1, "1$ is minimum"),
+  total: z.number().min(1, "1₹ is minimum"),
 
   status: z.enum(["PAID", "PENDING"]).default("PENDING"),
 

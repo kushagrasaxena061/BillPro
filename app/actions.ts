@@ -68,7 +68,7 @@ export async function createInvoice(prevState: any, formData: FormData) {
   });
 
   const sender = {
-    email: "hello@mailtrap.club",
+    email: "hello@demomailtrap.com",
     name: "Kushagra",
   };
 
@@ -84,7 +84,7 @@ export async function createInvoice(prevState: any, formData: FormData) {
       }).format(new Date(submission.value.date)),
       invoiceAmount: formatCurrency({
         amount: submission.value.total,
-        currency: submission.value.currency as any,
+        currency: "INR" as any,
       }),
       invoiceLink:
         process.env.NODE_ENV !== "production"
@@ -134,7 +134,7 @@ export async function editInvoice(prevState: any, formData: FormData) {
   });
 
   const sender = {
-    email: "hello@mailtrap.club",
+    email: "hello@demomailtrap.com",
     name: "Kushagra",
   };
 
@@ -150,7 +150,7 @@ export async function editInvoice(prevState: any, formData: FormData) {
       }).format(new Date(submission.value.date)),
       invoiceAmount: formatCurrency({
         amount: submission.value.total,
-        currency: submission.value.currency as any,
+        currency: "INR" as any,
       }),
       invoiceLink:
         process.env.NODE_ENV !== "production"

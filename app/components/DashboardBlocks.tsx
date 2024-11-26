@@ -1,9 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Activity, CreditCard, DollarSign, Users } from "lucide-react";
+import { Activity, CreditCard, IndianRupee, Users } from "lucide-react";
 import prisma from "../utils/db";
 import { requireUser } from "../utils/hooks";
 import { formatCurrency } from "../utils/formatCurrency";
-
 async function getData(userId: string) {
   const [data, openInvoices, paidinvoices] = await Promise.all([
     prisma.invoice.findMany({
@@ -53,14 +52,14 @@ export async function DashboardBlocks() {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
-          <DollarSign className="size-4 text-muted-foreground" />
+          <IndianRupee className="size-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
           <h2 className="text-2xl font-bold">
             {/* @ts-ignore */}
             {formatCurrency({
               amount: data.reduce((acc :any, invoice:any) => acc + invoice.total, 0),
-              currency: "USD",
+              currency: "INR",
             })}
           </h2>
           <p className="text-xs text-muted-foreground">Based on total volume</p>
