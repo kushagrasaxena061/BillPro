@@ -9,7 +9,7 @@ export function Navbar() {
       <Link href="/" className="flex items-center gap-2">
         <Image src={Logo} alt="Logo" className="size-10" />
         <h3 className="text-3xl font-semibold">
-          Invo<span className="text-blue-500">icing</span>
+          Bill<span className="text-blue-500">Pro</span>
         </h3>
       </Link>
       <Link href="/login">
