@@ -36,7 +36,7 @@ export async function RecentInvoices() {
         {data.map((item:any) => (
           <div className="flex items-center gap-4" key={item.id}>
             <Avatar className="hidden sm:flex size-9">
-              <AvatarFallback>{item.clientName.slice(0, 2)}</AvatarFallback>
+              <AvatarFallback className="capitalize">{item.clientName.slice(0, 2)}</AvatarFallback>
             </Avatar>
             <div className="flex flex-col gap-1">
               <p className="text-sm font-medium leadin-none">
