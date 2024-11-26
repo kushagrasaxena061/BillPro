@@ -33,7 +33,7 @@ export async function RecentInvoices() {
         <CardTitle>Recent Invoices</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-8">
-        {data.map((item) => (
+        {data.map((item:any) => (
           <div className="flex items-center gap-4" key={item.id}>
             <Avatar className="hidden sm:flex size-9">
               <AvatarFallback>{item.clientName.slice(0, 2)}</AvatarFallback>

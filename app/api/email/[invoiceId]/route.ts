@@ -28,13 +28,13 @@ export async function POST(
     }
 
     const sender = {
-      email: "hello@demomailtrap.com",
-      name: "Jan Marshal",
+      email: "hello@mailtrap.club",
+      name: "Kushagra",
     };
 
     emailClient.send({
       from: sender,
-      to: [{ email: "jan@alenix.de" }],
+      to: [{ email: "kushagrasaxena061@gmail.com" }],
       template_uuid: "03c0c5ec-3f09-42ab-92c3-9f338f31fe2c",
       template_variables: {
         first_name: invoiceData.clientName,

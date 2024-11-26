@@ -59,7 +59,7 @@ export async function InvoiceList() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {data.map((invoice) => (
+            {data.map((invoice:any) => (
               <TableRow key={invoice.id}>
                 <TableCell>#{invoice.invoiceNumber}</TableCell>
                 <TableCell>{invoice.clientName}</TableCell>

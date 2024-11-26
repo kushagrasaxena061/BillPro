@@ -59,7 +59,7 @@ export async function DashboardBlocks() {
           <h2 className="text-2xl font-bold">
             {/* @ts-ignore */}
             {formatCurrency({
-              amount: data.reduce((acc, invoice) => acc + invoice.total, 0),
+              amount: data.reduce((acc :any, invoice:any) => acc + invoice.total, 0),
               currency: "USD",
             })}
           </h2>
@@ -107,3 +107,4 @@ export async function DashboardBlocks() {
     </div>
   );
 }
+

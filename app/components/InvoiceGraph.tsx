@@ -30,7 +30,7 @@ async function getInvoices(userId: string) {
 
   //Group and aggregate data by date
   const aggregatedData = rawData.reduce(
-    (acc: { [key: string]: number }, curr) => {
+    (acc: { [key: string]: number }, curr:any) => {
       const date = new Date(curr.createdAt).toLocaleDateString("en-US", {
         month: "short",
         day: "numeric",
@@ -71,6 +71,7 @@ export async function InvoiceGraph() {
         </CardDescription>
       </CardHeader>
       <CardContent>
+        {/* @ts-ignore */}
         <Graph data={data} />
       </CardContent>
     </Card>
